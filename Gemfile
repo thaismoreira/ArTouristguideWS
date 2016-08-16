@@ -36,6 +36,12 @@ gem 'high_voltage'
 gem 'simple_form'
 gem 'thin'
 
+#authentication
+gem 'devise'
+gem 'devise-i18n'
+gem 'devise_invitable'
+gem 'cancancan', '~> 1.9.2'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

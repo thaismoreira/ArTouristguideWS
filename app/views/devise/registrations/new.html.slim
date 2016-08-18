@@ -15,12 +15,12 @@
               = devise_error_messages!
 
           .form-group
-            = f.label(:first_name)
-            = f.text_field(:first_name, autofocus: true, placeholder: 'First name', class: 'form-control')
+            = f.label('Nome')
+            = f.text_field(:first_name, autofocus: true, placeholder: 'Nome', class: 'form-control')
 
           .form-group
-            = f.label(:last_name)
-            = f.text_field(:last_name, placeholder: 'Last name', class: 'form-control')
+            = f.label('Sobrenome')
+            = f.text_field(:last_name, placeholder: 'Sobrenome', class: 'form-control')
 
           .form-group
             = f.label(:email)
@@ -33,11 +33,11 @@
             = f.password_field(:password, autocomplete: 'off', placeholder: 'Password', class: 'form-control')
 
           .form-group
-            = f.label(:password_confirmation)
-            = f.password_field(:password_confirmation, autocomplete: 'off', placeholder: 'Password confirmation', class: 'form-control')
+            = f.label('Confirmar Password')
+            = f.password_field(:password_confirmation, autocomplete: 'off', placeholder: 'Confirmar Password', class: 'form-control')
           = f.submit('Register', class: 'btn btn-primary btn-block')
 
       .panel-footer
         p
-          = 'Already Registered? Log In '
+          = 'Já cadastrado? Log In '
           = link_to('here', new_user_session_path)

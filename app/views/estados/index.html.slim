@@ -1,0 +1,23 @@
+h1 Listing estados
+
+table
+  thead
+    tr
+      th Nome
+      th Sigla
+      th
+      th
+      th
+
+  tbody
+    - @estados.each do |estado|
+      tr
+        td = estado.nome
+        td = estado.sigla
+        td = link_to 'Show', estado
+        td = link_to 'Edit', edit_estado_path(estado)
+        td = link_to 'Excluir', estado, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Estado', new_estado_path

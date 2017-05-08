@@ -1,0 +1,21 @@
+h1 Listing tipo_ponto_turisticos
+
+table
+  thead
+    tr
+      th Tipo
+      th
+      th
+      th
+
+  tbody
+    - @tipo_ponto_turisticos.each do |tipo_ponto_turistico|
+      tr
+        td = tipo_ponto_turistico.tipo
+        td = link_to 'Show', tipo_ponto_turistico
+        td = link_to 'Edit', edit_tipo_ponto_turistico_path(tipo_ponto_turistico)
+        td = link_to 'Excluir', tipo_ponto_turistico, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Tipo ponto turistico', new_tipo_ponto_turistico_path

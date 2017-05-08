@@ -1,0 +1,2 @@
+class TipoPontoTuristico < ApplicationRecord
+end

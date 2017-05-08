@@ -1,0 +1,1 @@
+json.partial! "tipo_ponto_turisticos/tipo_ponto_turistico", tipo_ponto_turistico: @tipo_ponto_turistico

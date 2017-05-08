@@ -1,0 +1,1 @@
+json.array! @tipo_ponto_turisticos, partial: 'tipo_ponto_turisticos/tipo_ponto_turistico', as: :tipo_ponto_turistico

@@ -1,0 +1,12 @@
+= form_for @tipo_ponto_turistico do |f|
+  - if @tipo_ponto_turistico.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@tipo_ponto_turistico.errors.count, "error")} prohibited this tipo_ponto_turistico from being saved:"
+      ul
+        - @tipo_ponto_turistico.errors.full_messages.each do |message|
+          li = message
+
+  .field
+    = f.label :tipo
+    = f.text_field :tipo
+  .actions = f.submit 'Salvar'

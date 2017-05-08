@@ -1,0 +1,9 @@
+p#notice = notice
+
+p
+  strong Tipo:
+  = @tipo_ponto_turistico.tipo
+
+= link_to 'Edit', edit_tipo_ponto_turistico_path(@tipo_ponto_turistico)
+'|
+= link_to 'Back', tipo_ponto_turisticos_path

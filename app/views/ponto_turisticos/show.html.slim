@@ -1,0 +1,36 @@
+p#notice = notice
+
+p
+  strong Nome:
+  = @ponto_turistico.nome
+p
+  strong Endereco:
+  = @ponto_turistico.endereco
+p
+  strong Cep:
+  = @ponto_turistico.cep
+p
+  strong Cidade:
+  = @ponto_turistico.cidade
+p
+  strong Estado:
+  = @ponto_turistico.estado.nome
+p
+  strong Tipo Ponto Turistico:
+  = @ponto_turistico.tipopontoturistico.tipo
+p
+  strong Latitude:
+  = @ponto_turistico.latitude
+p
+  strong Longitude:
+  = @ponto_turistico.longitude
+p
+  strong Raio:
+  = @ponto_turistico.raio
+p
+  strong Azimuthe:
+  = @ponto_turistico.azimuthe
+
+= link_to 'Edit', edit_ponto_turistico_path(@ponto_turistico)
+'|
+= link_to 'Back', ponto_turisticos_path

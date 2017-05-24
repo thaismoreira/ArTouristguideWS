@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :ponto_turisticos
   resources :tipo_ponto_turisticos
   resources :estados
   devise_for :users

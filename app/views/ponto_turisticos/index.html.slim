@@ -1,0 +1,39 @@
+h1 Listing ponto_turisticos
+
+table
+  thead
+    tr
+      th Nome
+      th Endereco
+      th Cep
+      th Cidade
+      th Estado
+      th Tipopontoturistico
+      th Latitude
+      th Longitude
+      th Raio
+      th Azimuthe
+      th
+      th
+      th
+
+  tbody
+    - @ponto_turisticos.each do |ponto_turistico|
+      tr
+        td = ponto_turistico.nome
+        td = ponto_turistico.endereco
+        td = ponto_turistico.cep
+        td = ponto_turistico.cidade
+        td = ponto_turistico.estado
+        td = ponto_turistico.tipopontoturistico
+        td = ponto_turistico.latitude
+        td = ponto_turistico.longitude
+        td = ponto_turistico.raio
+        td = ponto_turistico.azimuthe
+        td = link_to 'Show', ponto_turistico
+        td = link_to 'Edit', edit_ponto_turistico_path(ponto_turistico)
+        td = link_to 'Destroy', ponto_turistico, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Ponto turistico', new_ponto_turistico_path

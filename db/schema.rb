@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170508224908) do
+ActiveRecord::Schema.define(version: 20170523232534) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,6 +20,23 @@ ActiveRecord::Schema.define(version: 20170508224908) do
     t.string   "sigla"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "ponto_turisticos", force: :cascade do |t|
+    t.string   "nome"
+    t.string   "endereco"
+    t.string   "cep"
+    t.string   "cidade"
+    t.integer  "estado_id"
+    t.integer  "tipo_ponto_turistico_id"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.integer  "raio"
+    t.float    "azimuthe"
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+    t.index ["estado_id"], name: "index_ponto_turisticos_on_estado_id", using: :btree
+    t.index ["tipo_ponto_turistico_id"], name: "index_ponto_turisticos_on_tipo_ponto_turistico_id", using: :btree
   end
 
   create_table "tipo_ponto_turisticos", force: :cascade do |t|
@@ -48,4 +65,6 @@ ActiveRecord::Schema.define(version: 20170508224908) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  add_foreign_key "ponto_turisticos", "estados"
+  add_foreign_key "ponto_turisticos", "tipo_ponto_turisticos"
 end

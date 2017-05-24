@@ -1,0 +1,1 @@
+json.partial! "ponto_turisticos/ponto_turistico", ponto_turistico: @ponto_turistico

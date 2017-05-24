@@ -1,0 +1,2 @@
+json.extract! ponto_turistico, :id, :nome, :endereco, :cep, :cidade, :estado_id, :tipopontoturistico_id, :latitude, :longitude, :raio, :azimuthe, :created_at, :updated_at
+json.url ponto_turistico_url(ponto_turistico, format: :json)

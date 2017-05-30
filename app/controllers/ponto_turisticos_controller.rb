@@ -69,6 +69,6 @@ class PontoTuristicosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def ponto_turistico_params
-      params.require(:ponto_turistico).permit(:nome, :endereco, :cep, :cidade, :estado_id, :tipopontoturistico_id, :latitude, :longitude, :raio, :azimuthe)
+      params.require(:ponto_turistico).permit(:nome, :endereco, :cep, :cidade, :estado_id, :tipo_ponto_turistico_id, :latitude, :longitude, :raio, :azimuthe)
     end
 end

@@ -22,8 +22,8 @@
     = f.label :estado
     = f.select(:estado_id, Estado.all.collect {|u|[u.nome, u.id]})
   .field
-    = f.label 'Tipo Ponto Turistico'
-    = f.select(:tipo_ponto_turistico_id, TipoPontoTuristico.all.collect {|u|[u.tipo, u.id]})
+    = f.label :tipo_ponto_turistico
+    = f.select(:tipo_ponto_turistico_id, TipoPontoTuristico.all.collect {|t|[t.tipo, t.id]})
   .field
     = f.label :latitude
     = f.text_field :latitude
